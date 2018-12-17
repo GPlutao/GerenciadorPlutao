@@ -1,0 +1,66 @@
+
+body {
+	background-image: url('projcarla.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	background-color: white;
+}
+
+li {
+	float: left;
+	border-right:1px solid black;
+}
+
+li a {
+	display: block;
+	padding: 14px 16px;
+	color: SeaGreen;
+	text-aling: center;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	background-color: white;
+	color: #17A2B8;
+}
+
+.active {
+	background-color: white;
+	color: #17A2B8;
+}
+
+form{
+	padding: 10px 70px;
+}
+
+h1{
+	color: white;
+	text-align: center;
+}
+
+h3{
+	color: white;
+	text-align: left;
+	margin:4%;
+}
+
+label{
+	color: white;
+}
+
+ .container {
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: center
+}

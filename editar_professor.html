@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>GERENCIADOR</title>
+		<meta charset = "utf-8">
+		<link  rel="stylesheet" type="text/css" href="css_gerenciador.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+		
+
+
+	<div class="card bg-info text-white text-center p-3">
+    	<blockquote class="blockquote mb-0">
+    		<h5 class="card-title">Bem-vindo o Gerenciador Plutão!</h5>
+    	</blockquote>
+	</div>
+
+<br><br><br><br>
+
+<table>
+	<td>
+    <div class="card" style="width: 18rem; align-items: center;">
+	  <ul class="list-group list-group-flush">
+	    <li class="list-group-item"><a href="index.html" class="card-link">Fazer Login</a></li>
+	    <li class="list-group-item"><a href="cadastrar_aluno.html" class="card-link">Cadastrar Aluno</a></li>
+	    <li class="list-group-item"><a href="cadastrar_professor.html" class="card-link">Cadastrar Professor</a></li>
+	    <li class="list-group-item"><a href="editar_aluno.html" class="card-link">Editar Aluno</a></li>
+	    <li class="list-group-item"><a href="editar_professor.html" class="card-link">Editar Professor</a></li>
+	  </ul>
+	</div>
+	</td>
+
+	<td>
+		<h3>Formulário para editar cadastro de professores:</h3>
+		<form name="editar_professor" action="ProfEditarCadastro.php" method="POST">
+			<p>(preencha TODOS os campos, não só os que deseja alterar.)<br>
+
+			<label>Matrícula: </label><br>
+			<input type="text" name="matriculaProfessor" size="45"><br><br>
+				
+			<label>Nome completo: </label><br>
+			<input type="text" name="nomeProfessor" size="45"><br><br>
+				
+			<label>E-mail: </label><br>
+			<input type="text" name="emailProfessor" size="45"><br><br>
+				
+			<label>Senha: </label><br>
+			<input type="text" name="senhaProfessor" size="45"><br><br>
+				
+			<input type="submit" name="salvar" value="Editar">
+		</form>
+	</td>
+
+</table>
+
+<br><br><br><br>
+
+	<footer class=" card-footer bg-info text-white text-center p-3">
+        Se você é um aluno ou professor e ainda não se cadastrou selecione a opção do menu e entre no gerenciador Plutão.
+     </footer>
+	</body>
+</html>
