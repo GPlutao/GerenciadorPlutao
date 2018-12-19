@@ -1,34 +1,37 @@
 <?php
+//session_start();
+include('verifica.php');
 
-$id_aluno = $_POST['id_aluno'];
-$disciplina = $_POST['disciplina'];
-$notas = $_POST['notas'];
+//fazer consulta sql
+//select * from aluno where email = SESSION["email"]
+//echo $_SESSION['email'];
 
+?>
+<html>
+	<head>
+		<title>GERENCIADOR</title>
+		<meta charset = "utf-8">
+		<link  rel="stylesheet" type="text/css" href="css_gerenciador.css">
+	</head>
+	<body>
+		<h1>Gerenciador</h1>
+		<!--Menu-->
+		<ul>
+			<li><h2>Olá, <?php echo $_SESSION['email'];?></h2></li>
+			<li style="float:right"><a href="logout.php">Sair</a>></li>
+			<li style="float:right"><a href="ajuda.html">Ajuda</a></li>
+		</ul><br><br>	
+				
+		<h3>VEJA AQUI SUAS NOTAS</h3>	
+		<form name="aluno" action="aluno.php" method="POST">
+			<label>Id do aluno:</label><br>
+				<input type="text" name="id_aluno" size="45"><br>
 
-$conectar = new mysqli("localhost", "root", "", "gerenciador");
-
-if ($conectar -> connect_error) {
-	echo"<script language='javascript' type='text/javascript'>alert('Falha na conexão com o banco de dados.');window.location.href='login.html';</script>";
-}
-else {
-	$sql = mysql_query("SELECT nome FROM aluno");
-	$array = mysql_fetch_array($sql);
-
-	for ($lop = 0; $lop < count($array); $lop++){
-		echo ($array[$lop]);
-		<html>
-		<input type = "checkbox" name = "opcoes" value = "presenca"/>
-		</html>
-	}
-
-	$.get("professor.html");
-
-	$conectar -> query();
-
-
-	$aluno = "SELECT nome_aluno FROM aluno WHERE matricula_aluno = '$id_aluno'";
-	$sql = "SELECT * FROM notas WHERE nome_aluno ='$aluno'";
-	echo $sql;
-}
-
-?> 
+			<label>Selecione a disciplina:</label><br>
+				<input type="text" name="disciplina" size="45"><br><br>	
+			
+			<input type="submit" name="notas" value="Ver notas">
+		</form>
+		
+	</body>
+</html>
